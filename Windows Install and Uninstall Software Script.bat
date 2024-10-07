@@ -4,6 +4,7 @@ echo Windows Install and Uninstall Software Script
 :menu
 echo.
 echo "Updating package list..."
+winget upgrade --id Microsoft.Winget.Client
 winget upgrade --all
 
 echo 1. Install software
