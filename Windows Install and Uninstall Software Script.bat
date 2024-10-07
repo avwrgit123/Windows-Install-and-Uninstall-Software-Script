@@ -1,6 +1,19 @@
 @echo off
 echo Windows Install and Uninstall Software Script
 
+:check_winget
+winget --version >nul 2>&1
+REM >nul 2>&1: This combination means that both standard output and standard error from the command are sent to nul, 
+REM effectively silencing any output that the command would normally display in the command prompt.
+if errorlevel 1 (
+REM In a Windows batch script, if errorlevel is used to check the exit code (also known as the return code or status code) of the last executed command. 
+REM The exit code is a numeric value returned by a command to indicate whether it was successful or if it encountered an error.
+    echo "winget not found"
+    echo "Installing winget..."
+    powershell -Command "Start-Process ms-store: -ArgumentList 'ms-windows-store://pdp/?ProductId=9nblggh4nns1'" 
+    exit /b
+)
+
 :menu
 echo.
 echo "Updating winget package manager."
