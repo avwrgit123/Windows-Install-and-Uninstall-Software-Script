@@ -28,6 +28,7 @@ goto menu
 :install
 echo.
 set /p software="What software do you want to install? "
+winget search %software%
 winget install %software%
 goto menu
 
