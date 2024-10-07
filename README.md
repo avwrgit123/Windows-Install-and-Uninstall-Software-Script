@@ -4,4 +4,5 @@ The script Windows Install and Uninstall Software.bat upgrade all softwares inst
 
 The script Windows Install and Uninstall Software.bat use cmd
 The script WindowsInstallAndUninstallSoftware.ps1 use powershell
-run the script you choose as administrator
+
+download and run the script you choose as administrator
