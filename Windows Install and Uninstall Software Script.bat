@@ -3,10 +3,12 @@ echo Windows Install and Uninstall Software Script
 
 :menu
 echo.
-echo "Updating package list..."
+echo "Updating winget package manager..."
 winget upgrade --id Microsoft.Winget.Client
+echo "Updating package list..."
 winget upgrade --all
 
+echo "Script options: Choose one of the options below by selecting a number."
 echo 1. Install software
 echo 2. Uninstall software
 echo 3. Uninstall software with no trace
